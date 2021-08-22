@@ -5,19 +5,19 @@
 //Значением исполнившегося промиса должно быть то кол-во 
 //миллисекунд которое передали во время вызова функции delay.
 
-// const delay = ms => {
-//     return new Promise ((resolved) => {
-//       setTimeout(() => {
-//         resolved(ms)
-//       }, ms);
-//     });
-//   };
+const delay = ms => {
+    return new Promise ((resolved) => {
+      setTimeout(() => {
+        resolved(ms)
+      }, ms);
+    });
+  };
   
-//   const logger = time => console.log(`Resolved after ${time}ms`);
+  const logger = time => console.log(`Resolved after ${time}ms`);
 
-//   console.log(delay(2500));
+  console.log(delay(2500));
 
-//   // Вызовы функции для проверки
-//   delay(2000).then(logger); // Resolved after 2000ms
-//   delay(1000).then(logger); // Resolved after 1000ms
-//   delay(1500).then(logger); // Resolved after 1500ms
+  // Вызовы функции для проверки
+  delay(2000).then(logger); // Resolved after 2000ms
+  delay(1000).then(logger); // Resolved after 1000ms
+  delay(1500).then(logger); // Resolved after 1500ms
